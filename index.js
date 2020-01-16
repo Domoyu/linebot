@@ -13,7 +13,7 @@ bot.listen('/', process.env.PORT, () => {
 })
 
 bot.on('message', event => {
-    if (event.message === 'text') {
+    if (event.message.type === 'text') {
         // event.reply(event.message,text)
         const usermsg = event.message.text
         rp('https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&category=6')
